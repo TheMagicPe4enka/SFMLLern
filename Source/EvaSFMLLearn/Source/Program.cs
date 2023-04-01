@@ -34,7 +34,7 @@ namespace SnakeSFML
 
         public static void TileMapLearn()
         {
-            CBaseRenderWindow window = new CBaseRenderWindow(new VideoMode(512, 256), "Tilemap");
+            CRenderWindow window = new CRenderWindow(new VideoMode(512, 256), "Tilemap");
             int[] level =
                 {
                         0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
@@ -46,7 +46,7 @@ namespace SnakeSFML
                         2, 0, 1, 0, 3, 0, 2, 2, 2, 0, 1, 1, 1, 1, 1, 1,
                         0, 0, 1, 0, 3, 2, 2, 2, 0, 0, 0, 0, 1, 1, 1, 1,
                 };
-            BaseTileMap map = new BaseTileMap("tileset.png", new Vector2u(32, 32), level, 16, 8);
+            CTileMap map = new CTileMap("tileset.png", new Vector2u(32, 32), level, 16, 8);
             window.arDrawableItems.Add(map);
             Event pEvent;
             while (window.IsOpen)
